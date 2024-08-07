@@ -20,6 +20,6 @@ public class Fornecedor {
         this.nome = nome;
     }
 
-    public boolean manterFornec(int cnpj);
+    //public boolean manterFornec(int cnpj);
 
 }
