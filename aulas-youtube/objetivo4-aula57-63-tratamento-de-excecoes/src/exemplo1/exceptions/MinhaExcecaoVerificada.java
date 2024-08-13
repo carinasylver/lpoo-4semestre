@@ -1,4 +1,4 @@
-package exceptions;
+package exemplo1.exceptions;
 
 /*
     Há uma diferença sutil entre extender Exception ou RuntimeException.

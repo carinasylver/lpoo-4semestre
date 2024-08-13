@@ -1,4 +1,4 @@
-package model;
+package exemplo1.model;
 
 
 public class Conta {

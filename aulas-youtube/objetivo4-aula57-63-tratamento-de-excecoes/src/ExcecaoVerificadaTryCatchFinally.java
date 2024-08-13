@@ -9,11 +9,11 @@ public class ExcecaoVerificadaTryCatchFinally {
         }
         private static void comportamento2(){
             //divisao por zero
-            //System.out.println(10/0); //lança a exceção runtimeException com a pilha de exceçao e a msg da causa e a classe da excecao
+        //ex1    System.out.println(10/0); //lança a exceção runtimeException com a pilha de exceçao e a msg da causa e a classe da excecao
             //System.out.println("executou todas as chamadas");//eh executada se for comentada a linha acima
 
             //throwException(); //excecao verificada pelo compilador
-
+            // ou try catch abaixo
             //try-catch eh um unico comando, deve vir juntos
             try{ //tente execucao essa linha se nao der lance uma excecao
                 throwException(); //gera a excecao verificada pelo compilador
@@ -39,32 +39,6 @@ public class ExcecaoVerificadaTryCatchFinally {
             }
 
         }
-
-        //classe conta
-        class Conta{
-            private Double saldo=0.0;
-
-            public Conta(Double saldo) {
-                this.saldo = saldo;
-            }
-
-            public Double getSaldo() {
-                return saldo;
-            }
-
-            public void setSaldo(Double saldo) {
-                this.saldo = saldo;
-            }
-
-            @Override
-            public String toString() {
-                return "Conta{" +
-                        "saldo=" + saldo +
-                        '}';
-            }
-        }
-
-
 
 
 }
