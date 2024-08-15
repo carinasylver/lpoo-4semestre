@@ -1,0 +1,31 @@
++++++++ ATENÇÃO ++++++++++++++
+
+A API  de datas, java.time, possui um grande conjunto de métodos, logo,
+sufixos foram criados para facilitar a busca pelo método mais adequado para o problema a ser resolvido,
+sao eles(JAVA_DOC,2022):
+
+of -metodo de fabrica estático(valor de )
+parse - metodo de fábrica estático focado na analise(converte de um tipo para outro)
+get -  obtem o valor de algo
+is - verifica se algo é verdade
+with - o equivalente imutavel de um setter
+plus- adiciona uma quantidade a um objeto
+minus - subtrai uma quantidade de um objeto
+to - converte esse objeto para outro tipo
+at -combina este objeto com outro, como date.atTime(time)
+
+
+++++ As principais CLASSES para representar datas e horas são:
+
+***** Para computadores:
+Instant - representa um momento(data e hora) no tempo UTC
+Duration - mede o intervalo entre dois instantes
+
+***** Para humanos:
+LocalDate - representa uma data.
+LocalTime - representa um horário
+LocalDateTime - representa uma data com hora
+ZoneDateTime - representa uma data com hora e fuso horário
+Period - calcula o periodo decorrido entre duas datas(considera anos bissextos)
+DateTimeFomatter: para formatas a saida como uma String formatada(um mascara para data e hora)
+
