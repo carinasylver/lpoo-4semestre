@@ -46,7 +46,7 @@ public class TratamentoExcecoes {
 			mythrowExceptionNaoVerificada(); //chama o método para testar esse tipo de exceção
 			mythrowExceptionVerificada(); //chama o método para testar esse tipo de exceção
         } catch (MinhaExcecaoVerificada | MinhaExcecaoNaoVerificada e) {
-            throw new RuntimeException(e);
+            e.getMessage();
         } finally {
 			System.out.println("O código que estiver no bloco finally sempre é executado. Independernte se houve ou não exceção.");
 		}
