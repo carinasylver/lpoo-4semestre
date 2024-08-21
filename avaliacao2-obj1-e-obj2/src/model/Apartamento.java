@@ -3,11 +3,12 @@ package model;
 public class Apartamento extends Imovel{
     private String nomeDoCondomio;
 
+
     public Apartamento() {
     }
 
-    public Apartamento(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda, Double ITBI, String nomeDoCondomio) {
-        super(tipoDeLogradouro, logradouro, numero, complemento, bairro, cep, cidade, areaUtil, precoDeCotacao, precoDeVenda, ITBI);
+    public Apartamento(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda, String nomeDoCondomio) {
+        super(tipoDeLogradouro, logradouro, numero, complemento, bairro, cep, cidade, areaUtil, precoDeCotacao, precoDeVenda);
         this.nomeDoCondomio = nomeDoCondomio;
     }
 
@@ -21,7 +22,7 @@ public class Apartamento extends Imovel{
 
     @Override
     public Double getITBI() {
-        return super.getITBI() * 0.04;
+        return precoDeCotacao * 0.04;
     }
 
     @Override
@@ -38,7 +39,6 @@ public class Apartamento extends Imovel{
                 ", areaUtil=" + areaUtil +
                 ", precoDeCotacao=" + precoDeCotacao +
                 ", precoDeVenda=" + precoDeVenda +
-                ", ITBI=" + getITBI() +
                 "} ";
     }
 }

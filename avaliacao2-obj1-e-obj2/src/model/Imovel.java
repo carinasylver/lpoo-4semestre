@@ -12,12 +12,12 @@ public abstract class Imovel implements Portfolio{
     protected Double precoDeCotacao;
     protected Double precoDeVenda;
 
-    private Double ITBI;
+    //private Double ITBI;
 
     public Imovel() {
     }
 
-    public Imovel(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda, Double ITBI) {
+    public Imovel(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda) {
         this.tipoDeLogradouro = tipoDeLogradouro;
         this.logradouro = logradouro;
         this.numero = numero;
@@ -28,7 +28,6 @@ public abstract class Imovel implements Portfolio{
         this.areaUtil = areaUtil;
         this.precoDeCotacao = precoDeCotacao;
         this.precoDeVenda = precoDeVenda;
-        this.ITBI = ITBI;
     }
 
     public String getTipoDeLogradouro() {
@@ -111,14 +110,6 @@ public abstract class Imovel implements Portfolio{
         this.precoDeVenda = precoDeVenda;
     }
 
-    @Override
-    public Double getITBI() {
-        return ITBI;
-    }
+    public abstract Double getITBI(); //nao sei o getITBI do imovel deixo p cada subclasse decidir. nao implemento nada em classe abstract
 
-    public void setITBI(Double ITBI) {
-        this.ITBI = ITBI;
-    }
-
-    //public abstract double calcularITBI();
 }

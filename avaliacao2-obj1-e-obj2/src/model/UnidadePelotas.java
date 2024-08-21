@@ -3,11 +3,12 @@ package model;
 public class UnidadePelotas extends Imobiliaria {
     private Double taxaDeComissao;
 
+
     public UnidadePelotas() {
     }
 
-    public UnidadePelotas(String razaoSocial, String cnpj, Double previsaoFaturamento, Double ITBI, Double taxaDeComissao) {
-        super(razaoSocial, cnpj, previsaoFaturamento, ITBI);
+    public UnidadePelotas(String razaoSocial, String cnpj, Double previsaoDeFaturamento, Double taxaDeComissao) {
+        super(razaoSocial, cnpj, previsaoDeFaturamento);
         this.taxaDeComissao = taxaDeComissao;
     }
 
@@ -21,7 +22,7 @@ public class UnidadePelotas extends Imobiliaria {
 
     @Override
     public Double getITBI() {
-        return super.getPrevisaoFaturamento() * 0.02;
+        return previsaoDeFaturamento * 0.02;
     }
 
     @Override
@@ -30,8 +31,7 @@ public class UnidadePelotas extends Imobiliaria {
                 "taxaDeComissao=" + taxaDeComissao +
                 ", razaoSocial='" + razaoSocial + '\'' +
                 ", cnpj='" + cnpj + '\'' +
-                ", previsaoFaturamento=" + previsaoFaturamento +
-                ", ITBI=" + getITBI() +
+                ", previsaoFaturamento=" + previsaoDeFaturamento +
                 "} ";
     }
 }

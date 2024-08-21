@@ -6,8 +6,8 @@ public class UnidadePortoAlegre extends Imobiliaria{
     public UnidadePortoAlegre() {
     }
 
-    public UnidadePortoAlegre(String razaoSocial, String cnpj, Double previsaoFaturamento, Double ITBI, Double taxaDeComissao) {
-        super(razaoSocial, cnpj, previsaoFaturamento, ITBI);
+    public UnidadePortoAlegre(String razaoSocial, String cnpj, Double previsaoFaturamento, Double taxaDeComissao) {
+        super(razaoSocial, cnpj, previsaoFaturamento);
         this.taxaDeComissao = taxaDeComissao;
     }
 
@@ -19,9 +19,10 @@ public class UnidadePortoAlegre extends Imobiliaria{
         this.taxaDeComissao = taxaDeComissao;
     }
 
+
     @Override
     public Double getITBI() {
-        return super.getPrevisaoFaturamento() * 0.25;
+        return previsaoDeFaturamento * 0.025;
     }
 
     @Override
@@ -30,8 +31,7 @@ public class UnidadePortoAlegre extends Imobiliaria{
                 "taxaDeComissao=" + taxaDeComissao +
                 ", razaoSocial='" + razaoSocial + '\'' +
                 ", cnpj='" + cnpj + '\'' +
-                ", previsaoFaturamento=" + previsaoFaturamento +
-                ", ITBI=" + getITBI() +
+                ", previsaoFaturamento=" + previsaoDeFaturamento +
                 "} ";
     }
 }

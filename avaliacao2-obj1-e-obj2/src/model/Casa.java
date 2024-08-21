@@ -3,11 +3,12 @@ package model;
 public class Casa extends Imovel{
     private Double tamanhoDoTerreno;
 
+
     public Casa() {
     }
 
-    public Casa(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda, Double ITBI, Double tamanhoDoTerreno) {
-        super(tipoDeLogradouro, logradouro, numero, complemento, bairro, cep, cidade, areaUtil, precoDeCotacao, precoDeVenda, ITBI);
+    public Casa(String tipoDeLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cep, String cidade, Double areaUtil, Double precoDeCotacao, Double precoDeVenda, Double tamanhoDoTerreno) {
+        super(tipoDeLogradouro, logradouro, numero, complemento, bairro, cep, cidade, areaUtil, precoDeCotacao, precoDeVenda);
         this.tamanhoDoTerreno = tamanhoDoTerreno;
     }
 
@@ -19,12 +20,11 @@ public class Casa extends Imovel{
         this.tamanhoDoTerreno = tamanhoDoTerreno;
     }
 
+
     @Override
     public Double getITBI() {
-        return super.getPrecoDeCotacao() * 0.03;
+        return precoDeCotacao * 0.03;
     }
-
-
 
 
     @Override
@@ -40,7 +40,8 @@ public class Casa extends Imovel{
                 ", areaUtil=" + areaUtil +
                 ", precoDeCotacao=" + precoDeCotacao +
                 ", precoDeVenda=" + precoDeVenda +
-                ", ITBI=" + getITBI() +
                 "} ";
     }
+
+
 }

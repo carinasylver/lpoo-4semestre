@@ -4,24 +4,21 @@ public abstract class Imobiliaria implements Portfolio{
     //atributos
     protected String razaoSocial;
     protected String cnpj;
-    protected Double previsaoFaturamento;
+    protected Double previsaoDeFaturamento;
 
-    private Double ITBI;
+    //private Double ITBI;
+
 
     public Imobiliaria() {
     }
 
-    //construtor parametrizado
-
-    public Imobiliaria(String razaoSocial, String cnpj, Double previsaoFaturamento, Double ITBI) {
+    public Imobiliaria(String razaoSocial, String cnpj, Double previsaoDeFaturamento) {
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
-        this.previsaoFaturamento = previsaoFaturamento;
-        this.ITBI = ITBI;
+        this.previsaoDeFaturamento = previsaoDeFaturamento;
     }
+
     //metodos acessores
-
-
     public String getRazaoSocial() {
         return razaoSocial;
     }
@@ -38,21 +35,14 @@ public abstract class Imobiliaria implements Portfolio{
         this.cnpj = cnpj;
     }
 
-    public Double getPrevisaoFaturamento() {
-        return previsaoFaturamento;
+    public Double getPrevisaoDeFaturamento() {
+        return previsaoDeFaturamento;
     }
 
-    public void setPrevisaoFaturamento(Double previsaoFaturamento) {
-        this.previsaoFaturamento = previsaoFaturamento;
+    public void setPrevisaoDeFaturamento(Double previsaoDeFaturamento) {
+        this.previsaoDeFaturamento = previsaoDeFaturamento;
     }
 
-    @Override
-    public Double getITBI() {
-        return ITBI;
-    }
-
-    public void setITBI(Double ITBI) {
-        this.ITBI = ITBI;
-    }
+    public abstract Double getITBI();
 
 }
